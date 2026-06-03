@@ -65,4 +65,57 @@ let b=[5,67,12,43,1,98]
 b.splice(1,4)
 console.log(b);
 
-//
+//slice()
+let c= [3,3,6,78,12,0,34,23]
+let res =c.slice(2,6)
+console.log(c);
+console.log(res);
+
+//some()
+let szamok23=[3,45,6,7,3,13,45,2,1]
+let res2=szamok23.some((val) => val>10)
+console.log(res2);
+
+//map()
+let szamok24=[4,9,16]
+// let res3=szamok24.map(negyzetreemel)
+
+function negyzetreemel(){
+    let szam = szamok24.map(Math.sqrt)
+    console.log(szam);
+    
+}
+negyzetreemel()
+// console.log(res3);
+
+
+//filter()
+let szamok25=[1,2,5,4,23,45,23]
+let sz25=szamok25.filter((num) => num > 4)
+console.log(sz25);
+
+//reduce() 
+
+let szamok26=[90,5,23,45,12]
+let eredmeny=szamok26.reduce(muvelet)
+
+function muvelet(szam1,szam2){
+    return szam1-szam2
+    
+}
+console.log(eredmeny);
+
+//reverse()
+let megfordit =szamok25.reverse()
+console.log(megfordit);
+
+//values()
+let varosok=["Szeged","Budapest", "Békéscsaba","Miskolc"]
+
+let res4= varosok.values()
+
+for (const value of res4){
+    console.log(value);
+    
+}
+
